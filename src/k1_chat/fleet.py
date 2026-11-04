@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-_FILE = Path(__file__).resolve().parents[2] / "fleet.json"
+_FILE = Path(__file__).resolve().parent / "fleet.json"
 
 
 def load(path: Path = _FILE) -> dict:

@@ -1,6 +1,6 @@
 # Booster K1 fleet (as of 2026-10-27)
 
-Machine-readable copy: `../fleet.json` (loader `k1_chat.fleet`). Keep both in sync.
+Machine-readable copy: `../src/k1_chat/fleet.json` (loader `k1_chat.fleet`). Keep both in sync.
 
 | Robot | IP (static, robotics_5G) | Serial | WiFi MAC | Firmware | Status |
 |---|---|---|---|---|---|

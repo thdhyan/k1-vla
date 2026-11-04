@@ -10,7 +10,7 @@ cmd=${1:?usage: k1tools.sh check|estop|mode|console <robot>}
 name=${2:?robot name, e.g. a2}
 host=boosterk1.${name,,}
 root=$(cd "$(dirname "$0")/.." && pwd)
-ip=$(python3 -c "import json,sys;print(json.load(open('$root/fleet.json'))['robots']['${name^^}']['ip'] or '')")
+ip=$(python3 -c "import json,sys;print(json.load(open('$root/src/k1_chat/fleet.json'))['robots']['${name^^}']['ip'] or '')")
 [ -n "$ip" ] || { echo "no IP for $name in fleet.json" >&2; exit 2; }
 ROS='source /opt/ros/humble/setup.bash; source /opt/booster/ros2/setup.bash; export ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}'
 PY='cd ~/k1_chat && PYTHONPATH=src${PYTHONPATH:+:$PYTHONPATH} venv/bin/python'

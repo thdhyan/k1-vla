@@ -49,7 +49,6 @@ docs/  (6 files)
   FLEET.md
   README.md
   ssh_config.example
-fleet.json
 pyproject.toml
 robot/  (1 files)
   run.sh

@@ -15,6 +15,9 @@ dependencies = [
   "k1-runtime",
 ]
 
+[project.optional-dependencies]
+test = ["pytest", "respx"]
+
 [tool.uv.sources]
 k1-common = { git = "https://github.com/thdhyan/k1-common" }
 k1-utils = { git = "https://github.com/thdhyan/k1-utils" }
@@ -28,4 +31,13 @@ build-backend = "hatchling.build"
 packages = ["src/k1_chat"]
 
 # Provided by the environment (ROS 2, Isaac Sim/Lab, mjlab, robot SDK) or not on PyPI under this name:
-# dotenv, faster_whisper, geometry_msgs, kokoro_onnx, rclpy, respx, rosidl_runtime_py, sensor_msgs, std_msgs, ultralytics
+# dotenv, faster_whisper, geometry_msgs, kokoro_onnx, rclpy, rosidl_runtime_py, sensor_msgs, std_msgs, ultralytics
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "robot: needs a live K1 (set K1_IP)",
+  "net: needs internet / OpenRouter",
+  "onprem: needs the self-hosted LLM server",
+]
+addopts = "-m 'not robot and not net and not onprem'"
