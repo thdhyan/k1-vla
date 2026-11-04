@@ -6,8 +6,26 @@ k1_chat voice/VLM agent, tools and YOLO node.
 |---|---|
 | Layer | **L2**: Domain (no cross-imports) |
 | May import | [k1-common](https://github.com/thdhyan/k1-common), [k1-utils](https://github.com/thdhyan/k1-utils), [k1-runtime](https://github.com/thdhyan/k1-runtime) |
-| Files / LOC | 71 files · 5,976 lines (py, sh, cpp) |
+| Files / LOC | 69 files · 5,976 lines (py, sh, cpp) |
 | Part of | [k1-workspace](https://github.com/thdhyan/k1-workspace) (architecture and layering rules live there) |
+
+## Where it sits
+
+```mermaid
+flowchart TB
+  k1_common[k1-common]
+  k1_utils[k1-utils]
+  k1_runtime[k1-runtime]
+  k1_vla((k1-vla))
+  style k1_vla fill:#e8833a,color:#000
+  k1_vla --> k1_common
+  k1_vla --> k1_utils
+  k1_vla --> k1_runtime
+```
+
+Used by: nothing (top layer).
+
+![k1-workspace layers](https://raw.githubusercontent.com/thdhyan/k1-workspace/main/docs/img/architecture.png)
 
 ## Install
 
