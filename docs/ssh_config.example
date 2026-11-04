@@ -1,0 +1,6 @@
+Host boosterk1.a2
+  HostName 192.168.50.215
+  User booster
+  IdentityFile ~/.ssh/booster_k1
+  StrictHostKeyChecking accept-new
+# same block for a3 .230, b1 .105, b2 .62, b3 .248

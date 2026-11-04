@@ -1,0 +1,14 @@
+{
+  "network": {"ssid": "robotics_5G", "ssid_2g": "robotics", "subnet": "192.168.50.0/24", "gateway_router": "192.168.50.1",
+              "laptop_gateway_for_robots": "192.168.50.250", "dns": ["8.8.8.8", "1.1.1.1"]},
+  "ssh": {"user": "booster", "key": "~/.ssh/booster_k1"},
+  "ports": {"studio_ws": 51111, "rpc": 50051, "update_engine": 50052, "heartbeat_udp": 9000, "depth_sbs_http": 8090},
+  "robots": {
+    "A1": {"ip": null, "status": "out of commission"},
+    "A2": {"ip": "192.168.50.215", "serial": "(serial redacted)", "mac": "(MAC redacted)", "firmware": "1.8.1.2-release-02884", "status": "active"},
+    "A3": {"ip": "192.168.50.230", "serial": "(serial redacted)", "mac": "(MAC redacted)", "firmware": "1.6.2.2-release.global-02145", "status": "active"},
+    "B1": {"ip": "192.168.50.105", "serial": "(serial redacted)", "mac": "(MAC redacted)", "firmware": "1.6.2.2-release.global-02145", "status": "active"},
+    "B2": {"ip": "192.168.50.62", "serial": null, "mac": "(MAC redacted)", "firmware": "1.7.0.7 (old record)", "status": "active, identity/MAC unconfirmed"},
+    "B3": {"ip": "192.168.50.248", "serial": "(serial redacted)", "mac": "(MAC redacted)", "firmware": "1.6.2.2-release.global-02145", "status": "active"}
+  }
+}
